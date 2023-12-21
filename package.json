@@ -1,0 +1,14 @@
+{
+  "name": "rnd-surajan-jest",
+  "version": "1.0.0",
+  "description": "Learning Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Surajan Shrestha",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
