@@ -87,3 +87,21 @@ test("check arrays", () => {
   // Not Contain
   expect(arr).not.toContain("watermelon");
 });
+
+function throwErr() {
+  throw new Error("Error establishing a connection");
+}
+
+// Check execptions: toThrow
+test("check exceptions", () => {
+  // Note: This does not work 👇 ❌.
+  // Because calling throwErr() directly, will throw us the err when testing 😅: "Error establishing a connection"
+  // expect(throwErr()).toThrow();
+
+  expect(() => throwErr()).toThrow();
+  expect(() => throwErr()).toThrow(Error);
+
+  // Check specific error message
+  expect(() => throwErr()).toThrow("Error establishing a connection");
+  expect(() => throwErr()).toThrow(/connection/);
+});
