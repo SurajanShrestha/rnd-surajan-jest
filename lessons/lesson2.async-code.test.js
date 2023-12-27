@@ -1,4 +1,4 @@
-const { fetchData, fetchErr } = require("./async");
+const { fetchData, fetchErr } = require("../async");
 
 // Simple Promise
 test("check promise", () => {
