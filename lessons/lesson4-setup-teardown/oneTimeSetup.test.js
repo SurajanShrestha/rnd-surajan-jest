@@ -10,26 +10,26 @@ const isCity = (city) => {
   return cities?.includes(city);
 };
 
-// REPEATING SETUP AND TEARDOWN: beforeEach and afterEach
-// This will run each time for both Test "A" and "B". Will run before "A" and "B" starts.
-beforeEach(() => {
+// ONE-TIME SETUP AND TEARDOWN: beforeAll and afterAll
+// This will run once, before any of the tests "A" or "B" run.
+beforeAll(() => {
   initializeCityDb();
 });
-// This will run each time for both Test "A" and "B". Will run after "A" and "B" completes.
-afterEach(() => {
+// This will run once, after all of the tests "A" and "B" have been completed.
+afterAll(() => {
   clearCityDb();
 });
 
 // Test "A"
-test("city has Kathmandu", () => {
-  expect(isCity("Kathmandu")).toBeTruthy();
+test("city has New Delhi", () => {
+  expect(isCity("New Delhi")).toBeTruthy();
   // "cities" has data
   console.log("Cities", cities);
 });
 
 // Test "B"
-test("city has Canberra", () => {
-  expect(isCity("Canberra")).toBeTruthy();
+test("city has Washington DC", () => {
+  expect(isCity("Washington DC")).toBeTruthy();
 });
 
 // "cities" has been cleared
