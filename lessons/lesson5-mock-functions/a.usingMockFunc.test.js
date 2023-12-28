@@ -18,4 +18,7 @@ test("forEach mock function", () => {
 
   // Testing if 1st argument of the 1st call of this mock function is 1
   expect(mockCallback.mock.calls[1][0]).toBe(2);
+
+  // Test if return value of 1st call is 11
+  expect(mockCallback.mock.results[0].value).toBe(11);
 });
