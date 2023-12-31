@@ -1,4 +1,4 @@
-// Custom Matchers
+// Custom Matcher
 // This works like this: expect(received).yourCustomMatcher(expected)
 // There's also another value: expect(received).yourCustomMatcher(expected, someOtherValue)
 // 💡 All params inside custom matchers can be optional: expect(received).yourCustomMatcher()
